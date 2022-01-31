@@ -83,10 +83,91 @@ myName2 = "이성자"
 let myName3 = "My" + myName2
 
 
-// 문자열 삭제
+// 문자열 전부 삭제
 var myString2: String = "Swift Progamming"
 myString2.removeAll()
 myString2 = ""
+
+// 문자열 일부 삭제
+var myString3: String = "Swift Programming"
+let result2 = myString3.removeFirst()
+myString3
+
+
+// 문자열 중간 삭제
+myString3 = "Swift Programming"
+let removeIndex = myString3.index(myString3.startIndex, offsetBy: 3)
+myString3.remove(at: removeIndex)
+myString3
+
+// 문자열 범위(여러문자)로 삭제
+var myString4 = "Swift Programming"
+let range = myString4.index(myString4.endIndex, offsetBy: -12) ..< myString4.endIndex
+myString4.removeSubrange(range)
+myString4
+
+
+// 문자열 검색
+let myString5 = "Swift Programming"
+if myString5.contains("Swift") {
+    print("문자열 찾음")
+} else {
+    print("문자열 없음")
+}
+
+
+if let range1 = myString5.range(of: "Swift") {
+    print("문자열 찾음") // range가 nil이 아님
+} else {
+    print("문자열 없음")
+}
+
+
+// 문자열 분리 split
+let myString6 = "1,2,3,4,5"
+let arrayStr: [Substring] = myString6.split(separator: ",")
+for str in arrayStr {
+    print(str)
+}
+
+
+
+let arrayStr2:[String] = myString6.components(separatedBy: ",")
+for str in arrayStr {
+    print(str)
+}
+
+
+// 문자열을 숫자열로 바꾸기
+let myString7 = "1234567"
+let myInt:Int? = Int(myString7)
+
+// 정수 -> 실수로 변환
+let myFloat:Float? = Float(myInt!)
+
+
+
+// 래핑클래스
+// NSNumber : 모든 숫자 데이터형을 담을 수 있는 클래스(Int, Float, Double, Bool)
+var myInt2: Int = 10
+let myIntNumber = NSNumber(value: myInt2)
+var tempFloat = myIntNumber.floatValue
+var tempInt = myIntNumber.intValue
+
+
+// NSValue : 모든 데이터형을 래핑하는 클래스(기본자료형, 클래스(객체), 구조체, 열거형)
+let rangeValue = NSRange(location: 0, length: 3)
+let rangeValueObject = NSValue(range: rangeValue)
+let tmpRange = rangeValueObject.rangeValue
+
+// 문자열의 범위를 지정할때, NSRange를 사용함
+var myNSString2: NSString = NSString(string: "Swift Programming")
+let subStr = myNSString2.substring(with: rangeValue)
+
+
+// Swift Any 데이터 타입 : 모든 데이터 타입을 담을 수 있는 형
+
+
 
 
 
