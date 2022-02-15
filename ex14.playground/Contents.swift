@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-// 클로저 Closuer
+// 클로저 Closure
 
 // 코드블럭(Code Block) - 코드 뭉치
 // 코드 뭉치를 변수로 만들고, 매개변수로 전달하고, 실행도 할 수 있다.
@@ -50,13 +50,13 @@ printMyName(name1: "이진호", name2: "한지민")
 
 
 // 일반함수 코드블럭을 클로저변수로 만들어보자
-var myClouser: (String, String) -> Void = {
+var myClosure: (String, String) -> Void = {
     (name1:String, name2:String) -> Void in
     print("name1:\(name1), name2:\(name2)")
 }
-myClouser("남상미", "박신혜")
+myClosure("남상미", "박신혜")
 
 // 일반함수를 그대로 클로저변수로 선언
-var myClosuer2: (String, String) -> Void = printMyName(name1:name2:)
-myClosuer2("스위프트", "재밌어")
+var myClosure2: (String, String) -> Void = printMyName(name1:name2:)
+myClosure2("스위프트", "재밌어")
 
