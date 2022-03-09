@@ -83,5 +83,5 @@ var forcedCasted:Student?
 // forcedCasted = fa as! UnivStudent
 forcedCasted = son as! UnivStudent
 
-실제 코딩할때도 as 많이 씀
+//실제 코딩할때도 as 많이 씀
 
